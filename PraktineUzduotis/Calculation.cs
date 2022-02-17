@@ -13,5 +13,10 @@ namespace PraktineUzduotis
         public double hypotenuse;
         public double ourSum;
         public double ourAverage;
+
+        public void GStrazdas_Test()
+        {
+            Console.WriteLine("Veikai");
+        }
     }
 }
