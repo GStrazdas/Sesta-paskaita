@@ -14,7 +14,7 @@ namespace PraktineUzduotis
         private void EarthVolume()
         {
             const double earthRadius = 6371;
-            earthVolume = Math.PI * Math.Pow(earthRadius, 3) * 4 / 3;
+            earthVolume = Math.Round(Math.PI * Math.Pow(earthRadius, 3) * 4 / 3, 0);
         }
         private void CalculatEarthArea()
         {
@@ -30,7 +30,7 @@ namespace PraktineUzduotis
             EarthVolume();
             CalcHypotenuse();
             double sum = earthArea + earthVolume + hypotenuse;
-            double avg = sum / 3;
+            double avg = Math.Round(sum / 3, 2);
             Console.WriteLine("*********************************");
             Console.WriteLine("* Viso kintamųjų: 3");
             Console.WriteLine($"* earthArea: {earthArea}");
