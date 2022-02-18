@@ -8,7 +8,7 @@ namespace PraktineUzduotis
         {
             Console.WriteLine("Hello World!");
             Calculation earthArea = new Calculation();
-            earthArea.eartArea();
+            earthArea.CalculatEarthArea();
         }
     }
 }
