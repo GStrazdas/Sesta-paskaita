@@ -20,10 +20,15 @@ namespace PraktineUzduotis
         {
 
         }
+        private void CalcHypotenuse()
+        {
+
+        }
         public void Results()
         {
             CalculatEarthArea();
             EarthVolume();
+            CalcHypotenuse();
             double sum = earthArea + earthVolume + hypotenuse;
             double avg = sum / 3;
             Console.WriteLine("*********************************");
