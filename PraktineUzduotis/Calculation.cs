@@ -16,8 +16,13 @@ namespace PraktineUzduotis
             const double earthRadius = 6371;
             earthVolume = Math.PI * Math.Pow(earthRadius, 3) * 4 / 3;
         }
+        private void CalculatEarthArea()
+        {
+
+        }
         public void Results()
         {
+            CalculatEarthArea();
             EarthVolume();
             double sum = earthArea + earthVolume + hypotenuse;
             double avg = sum / 3;
