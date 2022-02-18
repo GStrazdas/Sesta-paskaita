@@ -12,7 +12,7 @@ namespace PraktineUzduotis
         public void CalculatEarthArea()
         {
             int radius = 6371;
-            double constant = 3.14;
+            double constant = Math.PI;
             earthArea = Math.Round((radius * radius) * (4 * constant), 2);
             Console.WriteLine($"eartArea: { earthArea}");
         }
