@@ -8,10 +8,17 @@ namespace PraktineUzduotis
 {
     internal class Calculation
     {
-        public double earthArea;
-        public double earthVolume;
         public double hypotenuse;
-        public double ourSum;
-        public double ourAverage;
+        public void CalcHypotenuse()
+        {
+            var a = 10;
+            var sqrA = a*a;
+            var b = 15;
+            var sqrB = b*b;
+            var sqrC = sqrA + sqrB;
+            var hypotenuse = Math.Sqrt(sqrC);
+            hypotenuse = Math.Round(hypotenuse);
+            Console.WriteLine($"*Hypotenuse: {hypotenuse};");
+        }
     }
 }
