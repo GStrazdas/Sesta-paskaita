@@ -6,7 +6,9 @@ namespace PraktineUzduotis
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Calculation calculation = new Calculation();
+
+            calculation.Results();
         }
     }
 }

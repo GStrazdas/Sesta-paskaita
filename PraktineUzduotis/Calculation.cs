@@ -8,15 +8,27 @@ namespace PraktineUzduotis
 {
     internal class Calculation
     {
-        public double earthArea;
-        public double earthVolume;
-        public double hypotenuse;
-        public double ourSum;
-        public double ourAverage;
-
-        public void GStrazdas_Test()
+        private double earthArea = 0;
+        private double earthVolume = 0;
+        private double hypotenuse = 0;
+        private void EarthVolume()
         {
-            Console.WriteLine("Veikai");
+            const double earthRadius = 6371;
+            earthVolume = Math.PI * Math.Pow(earthRadius, 3) * 4 / 3;
+        }
+        public void Results()
+        {
+            EarthVolume();
+            double sum = earthArea + earthVolume + hypotenuse;
+            double avg = sum / 3;
+            Console.WriteLine("*********************************");
+            Console.WriteLine("* Viso kintamųjų: 3");
+            Console.WriteLine($"* earthArea: {earthArea}");
+            Console.WriteLine($"* earthVolume: {earthVolume}");
+            Console.WriteLine($"* hypotenuse: {hypotenuse}");
+            Console.WriteLine($"* Suma: {sum}");
+            Console.WriteLine($"* Vidurkis: {avg}");
+            Console.WriteLine("*********************************");
         }
     }
 }
