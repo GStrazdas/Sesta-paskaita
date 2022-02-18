@@ -7,6 +7,8 @@ namespace PraktineUzduotis
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Calculation earthArea = new Calculation();
+            earthArea.eartArea();
         }
     }
 }
