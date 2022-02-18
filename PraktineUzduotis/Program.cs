@@ -8,6 +8,7 @@ namespace PraktineUzduotis
         {
             Calculation calculation = new Calculation();
             calculation.CalcHypotenuse();
+            calculation.Results();
            
         }
     }
