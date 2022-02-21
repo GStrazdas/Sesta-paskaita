@@ -7,9 +7,8 @@ namespace PraktineUzduotis
         static void Main(string[] args)
         {
             Calculation calculation = new Calculation();
-            calculation.CalcHypotenuse();
+
             calculation.Results();
-           
         }
     }
 }

@@ -8,6 +8,7 @@ namespace PraktineUzduotis
 {
     internal class Calculation
     {
+
         public double earthArea = 0;
         public double earthVolume = 0;
         public double hypotenuse = 0;
@@ -17,18 +18,33 @@ namespace PraktineUzduotis
             int b = 15;
             double hypotenuse = Math.Sqrt((a * a) + (b * b));
             hypotenuse = Math.Round(hypotenuse);
-            Console.WriteLine($"* Hypotenuse: {hypotenuse};");
-        }
-        //public double ourSum = 0;
-        //public double ourAverage = 0;
-        public void Results()
+         }
+        private void EarthVolume()
         {
-            double ourSum = earthArea + earthVolume + hypotenuse;
-            Console.WriteLine($"* Sum: {ourSum}");
-            double ourAverage = Math.Round(ourSum / 3);
-            Console.WriteLine($"* Average: {ourAverage}");
-            Console.WriteLine("***************************");
+            /*Skaiciavimas*/
+            const double earthRadius = 6371;
+            earthVolume = Math.Round(Math.PI * Math.Pow(earthRadius, 3) * 4 / 3, 0);
+        }
+        private void CalculatEarthArea()
+        {
 
         }
+        public void Results()
+        {
+            CalculatEarthArea();
+            EarthVolume();
+            CalcHypotenuse();
+            double sum = earthArea + earthVolume + hypotenuse;
+            double avg = Math.Round(sum / 3, 2);
+            Console.WriteLine("*********************************");
+            Console.WriteLine("* Viso kintamųjų: 3");
+            Console.WriteLine($"* earthArea: {earthArea}");
+            Console.WriteLine($"* earthVolume: {earthVolume}");
+            Console.WriteLine($"* hypotenuse: {hypotenuse}");
+            Console.WriteLine($"* Suma: {sum}");
+            Console.WriteLine($"* Vidurkis: {avg}");
+            Console.WriteLine("*********************************");
+        }
+
     }
 }
