@@ -8,9 +8,17 @@ namespace PraktineUzduotis
 {
     internal class Calculation
     {
-        private double earthArea = 0;
-        private double earthVolume = 0;
-        private double hypotenuse = 0;
+
+        public double earthArea = 0;
+        public double earthVolume = 0;
+        public double hypotenuse = 0;
+        public void CalcHypotenuse()
+        {
+            int a = 10;
+            int b = 15;
+            double hypotenuse = Math.Sqrt((a * a) + (b * b));
+            hypotenuse = Math.Round(hypotenuse);
+         }
         private void EarthVolume()
         {
             /*Skaiciavimas*/
@@ -18,10 +26,6 @@ namespace PraktineUzduotis
             earthVolume = Math.Round(Math.PI * Math.Pow(earthRadius, 3) * 4 / 3, 0);
         }
         private void CalculatEarthArea()
-        {
-
-        }
-        private void CalcHypotenuse()
         {
 
         }
@@ -41,5 +45,6 @@ namespace PraktineUzduotis
             Console.WriteLine($"* Vidurkis: {avg}");
             Console.WriteLine("*********************************");
         }
+
     }
 }
