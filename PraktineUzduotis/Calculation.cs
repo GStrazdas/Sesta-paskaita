@@ -13,6 +13,7 @@ namespace PraktineUzduotis
         private double hypotenuse = 0;
         private void EarthVolume()
         {
+            /*Skaiciavimas*/
             const double earthRadius = 6371;
             earthVolume = Math.Round(Math.PI * Math.Pow(earthRadius, 3) * 4 / 3, 0);
         }
